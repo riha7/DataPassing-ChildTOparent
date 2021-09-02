@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
 import Child from './Child';
+import Display from './Display';
 export default function App() {
   const [count, setcount] = useState(0);
   //create callback function.inside function update count value
@@ -11,6 +12,7 @@ export default function App() {
     <div>
       <h1>child to parent data: {count}</h1>
       <Child update={handleChild} count={count} />
+      <Display count={count} />
     </div>
   );
 }
